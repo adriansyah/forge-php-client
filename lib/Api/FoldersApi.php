@@ -281,7 +281,7 @@ class FoldersApi extends AbstractApi
             );
 
             return [
-                $this->apiClient->getSerializer()->deserialize($response, '\Autodesk\Forge\Client\Model\JsonApiCollection', $httpHeader),
+                $response, //$this->apiClient->getSerializer()->deserialize($response, '\Autodesk\Forge\Client\Model\JsonApiCollection', $httpHeader),
                 $statusCode,
                 $httpHeader,
             ];
